@@ -1,0 +1,60 @@
+{
+  "producers": [
+    {
+      "producer_id": "post-fiat-signals",
+      "display_name": "Post Fiat Crypto Signals",
+      "description": "Regime-conditioned crypto signals with calibrated confidence and weak-symbol policy",
+      "endpoint_url": "https://sendoeth.com/api/signals",
+      "repository_url": "https://github.com/sendoeth/post-fiat-signals",
+      "capabilities": [
+        "crypto_signals",
+        "regime_detection",
+        "routing_policy",
+        "weak_symbol_policy",
+        "proof_surface",
+        "forward_testing",
+        "multi_symbol"
+      ],
+      "symbol_coverage": {
+        "symbols": ["BTC", "ETH", "SOL", "LINK"],
+        "symbol_count": 4
+      },
+      "reputation_summary": {
+        "score": 0.62,
+        "grade": "B",
+        "accuracy": 0.515,
+        "n_resolved": 2128,
+        "last_resolved_at": "2026-03-26T10:47:47Z"
+      },
+      "supported_protocols": {
+        "signal_schema": "1.0.0",
+        "routing_protocol": "1.0.0",
+        "resolution_protocol": "1.0.0",
+        "proof_protocol": "1.0.0",
+        "aggregation_protocol": "1.0.0"
+      },
+      "liveness": {
+        "heartbeat_interval_seconds": 900,
+        "liveness_grade": "ALIVE",
+        "last_heartbeat_at": "2026-03-30T01:30:00Z"
+      },
+      "proof_summary": {
+        "freshness_grade": "RECENT",
+        "drift_status": "WATCH",
+        "last_update_at": "2026-03-29T20:35:33Z"
+      },
+      "trust_snapshot": {
+        "trust_score": 0.68,
+        "trust_grade": "B",
+        "trust_verdict": "TRUST",
+        "audited_at": "2026-03-29T21:00:00Z",
+        "audit_policy": "moderate"
+      },
+      "registration": {
+        "registered_at": "2026-03-19T00:00:00Z",
+        "registrar": "self_attestation",
+        "registration_version": 1
+      }
+    }
+  ]
+}

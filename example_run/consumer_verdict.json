@@ -1,0 +1,437 @@
+{
+  "meta": {
+    "quickstart_version": "1.0.0",
+    "protocol_version": "1.0.0",
+    "generated_at": "2026-03-30T09:17:05.113950+00:00",
+    "producer_id": "post-fiat-signals",
+    "content_hash": "563be87535ef03de"
+  },
+  "verdict": {
+    "trust_score": 0.7602,
+    "trust_grade": "B",
+    "trust_verdict": "TRUST",
+    "hard_gate_failures": []
+  },
+  "stages": [
+    {
+      "stage": "discovery",
+      "status": "PASS",
+      "duration_ms": 0.0,
+      "details": {
+        "producer_id": "post-fiat-signals",
+        "liveness_grade": "ALIVE",
+        "reputation_score": 0.62,
+        "reputation_grade": "B",
+        "drift_status": "WATCH",
+        "capabilities": [
+          "crypto_signals",
+          "regime_detection",
+          "routing_policy",
+          "weak_symbol_policy",
+          "proof_surface",
+          "forward_testing",
+          "multi_symbol"
+        ],
+        "checks": [
+          {
+            "check": "producer_found",
+            "passed": true
+          },
+          {
+            "check": "liveness_grade",
+            "value": "ALIVE",
+            "passed": true
+          },
+          {
+            "check": "reputation_score",
+            "value": 0.62,
+            "passed": true
+          },
+          {
+            "check": "capabilities_present",
+            "value": 7,
+            "passed": true
+          }
+        ]
+      },
+      "findings": []
+    },
+    {
+      "stage": "signal_fetch",
+      "status": "PASS",
+      "duration_ms": 0.1,
+      "details": {
+        "n_signals": 16,
+        "symbols": {
+          "BTC": 4,
+          "ETH": 4,
+          "SOL": 4,
+          "LINK": 4
+        },
+        "directions": {
+          "bullish": 4,
+          "bearish": 12
+        },
+        "actions": {
+          "EXECUTE": 12,
+          "WITHHOLD": 0,
+          "INVERT": 4
+        },
+        "source": "example_run/signals.json"
+      },
+      "findings": []
+    },
+    {
+      "stage": "schema_validation",
+      "status": "PASS",
+      "duration_ms": 0.0,
+      "details": {
+        "total_signals": 16,
+        "passed": 16,
+        "failed": 0,
+        "pass_rate": 1.0,
+        "level_distribution": {
+          "MINIMAL": 0,
+          "STANDARD": 16,
+          "FULL": 0,
+          "INCOMPLETE": 0
+        },
+        "common_errors": []
+      },
+      "findings": [
+        {
+          "severity": "INFO",
+          "message": "All signals at STANDARD or higher conformance"
+        }
+      ]
+    },
+    {
+      "stage": "routing_audit",
+      "status": "PASS",
+      "duration_ms": 0.1,
+      "details": {
+        "total_input": 16,
+        "total_emit": 8,
+        "total_withhold": 8,
+        "total_invert": 0,
+        "filter_rate": 0.5,
+        "invert_rate": 0.0,
+        "per_gate_pass_rates": {
+          "regime_gate": 1.0,
+          "duration_gate": 1.0,
+          "confidence_gate": 1.0,
+          "voi_gate": 0.5,
+          "weak_symbol_gate": 0.75
+        },
+        "config_provided": true,
+        "regime_context": {
+          "regime_id": "SYSTEMIC",
+          "duration_days": 19.0
+        },
+        "n_decisions": 16
+      },
+      "findings": [
+        {
+          "severity": "INFO",
+          "message": "4 signals have action mismatch between producer and routing audit"
+        }
+      ]
+    },
+    {
+      "stage": "resolution_verification",
+      "status": "PASS",
+      "duration_ms": 0.4,
+      "details": {
+        "n_signals": 16,
+        "n_resolved": 16,
+        "n_unresolved": 0,
+        "resolution_rate": 1.0,
+        "overall": {
+          "brier_score": 0.277475,
+          "reliability": 0.048267,
+          "resolution": 0.009375,
+          "accuracy": {
+            "point": 0.625,
+            "lower": 0.421899,
+            "upper": 0.791936,
+            "n": 16
+          },
+          "cw_accuracy": 0.6182,
+          "calibration_slope": -5.0667,
+          "sharpness": 0.000586
+        },
+        "per_symbol": {
+          "BTC": {
+            "n": 4,
+            "accuracy": 0.75,
+            "brier_score": 0.30075,
+            "cumulative_karma": 0.82,
+            "mean_karma": 0.205
+          },
+          "SOL": {
+            "n": 4,
+            "accuracy": 0.25,
+            "brier_score": 0.22865,
+            "cumulative_karma": -0.9,
+            "mean_karma": -0.225
+          },
+          "ETH": {
+            "n": 4,
+            "accuracy": 0.75,
+            "brier_score": 0.27635,
+            "cumulative_karma": 0.9,
+            "mean_karma": 0.225
+          },
+          "LINK": {
+            "n": 4,
+            "accuracy": 0.75,
+            "brier_score": 0.30415,
+            "cumulative_karma": 0.82,
+            "mean_karma": 0.205
+          }
+        },
+        "karma": {
+          "cumulative": 1.64,
+          "mean": 0.1025
+        },
+        "reputation": {
+          "composite_score": 0.5884,
+          "grade": "C",
+          "components": {
+            "calibration_quality": {
+              "score": 0.8069,
+              "weight": 0.2
+            },
+            "binary_accuracy": {
+              "score": 0.625,
+              "weight": 0.15
+            },
+            "cw_accuracy": {
+              "score": 0.591,
+              "weight": 0.2
+            },
+            "abstention_discipline": {
+              "score": 0.0,
+              "weight": 0.1
+            },
+            "confidence_sharpness": {
+              "score": 0.0117,
+              "weight": 0.1
+            },
+            "karma_validation": {
+              "score": 0.6394,
+              "weight": 0.1
+            },
+            "monotonicity": {
+              "score": 1.0,
+              "weight": 0.15
+            }
+          },
+          "formula_version": "2.0.0"
+        }
+      },
+      "findings": [
+        {
+          "severity": "INFO",
+          "message": "Small sample (16 resolved) \u2014 high variance in estimates"
+        }
+      ]
+    },
+    {
+      "stage": "proof_verification",
+      "status": "PASS",
+      "duration_ms": 0.0,
+      "details": {
+        "freshness_grade": "RECENT",
+        "age_hours": 15.28,
+        "drift_status": "WATCH",
+        "cusum_pos": 12.45,
+        "cusum_neg": 8.32,
+        "n_resolved": 3440,
+        "reputation_score": 0.489,
+        "reputation_grade": "D",
+        "window_accuracies": {
+          "7d": {
+            "point": 0.5204,
+            "lower": 0.4852,
+            "upper": 0.5555,
+            "n": 784
+          },
+          "14d": {
+            "point": 0.5146,
+            "lower": 0.4933,
+            "upper": 0.5359,
+            "n": 2128
+          },
+          "30d": {
+            "point": 0.4683,
+            "lower": 0.4516,
+            "upper": 0.4851,
+            "n": 3440
+          }
+        },
+        "checks": [
+          {
+            "check": "freshness_grade",
+            "value": "RECENT",
+            "passed": true
+          },
+          {
+            "check": "drift_status",
+            "value": "WATCH",
+            "passed": true
+          },
+          {
+            "check": "n_resolved",
+            "value": 3440,
+            "passed": true
+          },
+          {
+            "check": "reputation_score",
+            "value": 0.489,
+            "passed": true
+          }
+        ]
+      },
+      "findings": []
+    },
+    {
+      "stage": "full_audit",
+      "status": "PASS",
+      "duration_ms": 0.0,
+      "details": {
+        "trust_score": 0.7602,
+        "trust_grade": "B",
+        "trust_verdict": "TRUST",
+        "hard_gate_failures": [],
+        "components": {
+          "schema_compliance": {
+            "score": 1.0,
+            "weight": 0.15
+          },
+          "freshness": {
+            "score": 0.85,
+            "weight": 0.15
+          },
+          "reputation": {
+            "score": 0.5884,
+            "weight": 0.2
+          },
+          "drift_stability": {
+            "score": 0.7,
+            "weight": 0.15
+          },
+          "routing_discipline": {
+            "score": 1.0,
+            "weight": 0.1
+          },
+          "discovery_health": {
+            "score": 1.0,
+            "weight": 0.1
+          },
+          "signal_volume": {
+            "score": 0.4,
+            "weight": 0.15
+          }
+        },
+        "stage_summary": {
+          "total": 6,
+          "passed": 6,
+          "warned": 0,
+          "failed": 0,
+          "skipped": 0
+        },
+        "all_findings": [
+          {
+            "severity": "INFO",
+            "message": "All signals at STANDARD or higher conformance",
+            "stage": "schema_validation"
+          },
+          {
+            "severity": "INFO",
+            "message": "4 signals have action mismatch between producer and routing audit",
+            "stage": "routing_audit"
+          },
+          {
+            "severity": "INFO",
+            "message": "Small sample (16 resolved) \u2014 high variance in estimates",
+            "stage": "resolution_verification"
+          }
+        ]
+      },
+      "findings": []
+    }
+  ],
+  "trust_components": {
+    "schema_compliance": {
+      "score": 1.0,
+      "weight": 0.15
+    },
+    "freshness": {
+      "score": 0.85,
+      "weight": 0.15
+    },
+    "reputation": {
+      "score": 0.5884,
+      "weight": 0.2
+    },
+    "drift_stability": {
+      "score": 0.7,
+      "weight": 0.15
+    },
+    "routing_discipline": {
+      "score": 1.0,
+      "weight": 0.1
+    },
+    "discovery_health": {
+      "score": 1.0,
+      "weight": 0.1
+    },
+    "signal_volume": {
+      "score": 0.4,
+      "weight": 0.15
+    }
+  },
+  "findings": [
+    {
+      "severity": "INFO",
+      "message": "All signals at STANDARD or higher conformance",
+      "stage": "schema_validation"
+    },
+    {
+      "severity": "INFO",
+      "message": "4 signals have action mismatch between producer and routing audit",
+      "stage": "routing_audit"
+    },
+    {
+      "severity": "INFO",
+      "message": "Small sample (16 resolved) \u2014 high variance in estimates",
+      "stage": "resolution_verification"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "warned": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "companion_repos": {
+    "pf-discovery-protocol": "https://github.com/sendoeth/pf-discovery-protocol",
+    "pf-signal-schema": "https://github.com/sendoeth/pf-signal-schema",
+    "pf-routing-protocol": "https://github.com/sendoeth/pf-routing-protocol",
+    "pf-resolution-protocol": "https://github.com/sendoeth/pf-resolution-protocol",
+    "pf-proof-protocol": "https://github.com/sendoeth/pf-proof-protocol",
+    "pf-lifecycle-pipeline": "https://github.com/sendoeth/pf-lifecycle-pipeline",
+    "pf-consumer-audit": "https://github.com/sendoeth/pf-consumer-audit",
+    "pf-aggregation-protocol": "https://github.com/sendoeth/pf-aggregation-protocol"
+  },
+  "limitations": [
+    {
+      "id": "SMALL_SAMPLE",
+      "description": "Only 16 resolved signals. Accuracy and reputation estimates have high variance.",
+      "bias_direction": "INDETERMINATE",
+      "bias_magnitude": "Wilson 90% CI width ~12%"
+    }
+  ]
+}

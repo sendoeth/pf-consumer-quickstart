@@ -1,0 +1,72 @@
+{
+  "policy_version": "1.0.0",
+  "producer_id": "post-fiat-signals",
+  "gates": {
+    "regime_gate": {
+      "enabled": true,
+      "allowed_regimes": ["NEUTRAL", "DIVERGENCE", "SYSTEMIC", "EARNINGS"]
+    },
+    "duration_gate": {
+      "enabled": true,
+      "default_min_days": 15
+    },
+    "confidence_gate": {
+      "enabled": true,
+      "default_min_confidence": 0.30
+    },
+    "voi_gate": {
+      "enabled": true,
+      "min_voi": 0.0,
+      "use_hazard_adjustment": false
+    },
+    "weak_symbol_gate": {
+      "enabled": true,
+      "severity_threshold": "SEVERE"
+    }
+  },
+  "symbols": {
+    "BTC": {
+      "min_duration_days": 15,
+      "min_confidence": 0.30,
+      "weak_symbol_policy": "NONE",
+      "weakness_score": 0.0,
+      "weakness_severity": "NONE",
+      "inversion_justified": false,
+      "accuracy": 0.509
+    },
+    "ETH": {
+      "min_duration_days": 15,
+      "min_confidence": 0.30,
+      "weak_symbol_policy": "NONE",
+      "weakness_score": 0.0,
+      "weakness_severity": "NONE",
+      "inversion_justified": false,
+      "accuracy": 0.543
+    },
+    "SOL": {
+      "min_duration_days": 0,
+      "min_confidence": 0.30,
+      "weak_symbol_policy": "INVERT",
+      "weakness_score": 0.6979,
+      "weakness_severity": "SEVERE",
+      "inversion_justified": true,
+      "inversion_p_value": 0.0001,
+      "accuracy": 0.44
+    },
+    "LINK": {
+      "min_duration_days": 15,
+      "min_confidence": 0.30,
+      "weak_symbol_policy": "NONE",
+      "weakness_score": 0.18,
+      "weakness_severity": "MILD",
+      "inversion_justified": false,
+      "accuracy": 0.449
+    }
+  },
+  "duration_buckets": [
+    {"label": "early", "min_days": 0, "max_days": 12},
+    {"label": "mid", "min_days": 12, "max_days": 15},
+    {"label": "mature", "min_days": 15, "max_days": 18},
+    {"label": "late", "min_days": 18, "max_days": 9999}
+  ]
+}

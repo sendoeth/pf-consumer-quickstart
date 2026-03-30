@@ -1,0 +1,314 @@
+[
+  {
+    "signal_id": "pfs-btc-20260325-0000",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T00:00:00Z",
+    "symbol": "BTC",
+    "direction": "bearish",
+    "confidence": 0.42,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.012,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-eth-20260325-0000",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T00:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.46,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.012,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-sol-20260325-0000",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T00:00:00Z",
+    "symbol": "SOL",
+    "direction": "bearish",
+    "confidence": 0.44,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.012,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    },
+    "weak_symbol": {
+      "weakness_score": 0.6979,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "pfs-link-20260325-0000",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T00:00:00Z",
+    "symbol": "LINK",
+    "direction": "bearish",
+    "confidence": 0.41,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.012,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-btc-20260325-0600",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T06:00:00Z",
+    "symbol": "BTC",
+    "direction": "bearish",
+    "confidence": 0.43,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.78,
+      "proximity": 0.011,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-eth-20260325-0600",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T06:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.47,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.78,
+      "proximity": 0.011,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-sol-20260325-0600",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T06:00:00Z",
+    "symbol": "SOL",
+    "direction": "bearish",
+    "confidence": 0.45,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.78,
+      "proximity": 0.011,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    },
+    "weak_symbol": {
+      "weakness_score": 0.6979,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "pfs-link-20260325-0600",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T06:00:00Z",
+    "symbol": "LINK",
+    "direction": "bearish",
+    "confidence": 0.42,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.78,
+      "proximity": 0.011,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-btc-20260325-1200",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T12:00:00Z",
+    "symbol": "BTC",
+    "direction": "bullish",
+    "confidence": 0.44,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.76,
+      "proximity": 0.015,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-eth-20260325-1200",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T12:00:00Z",
+    "symbol": "ETH",
+    "direction": "bullish",
+    "confidence": 0.48,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.76,
+      "proximity": 0.015,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-sol-20260325-1200",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T12:00:00Z",
+    "symbol": "SOL",
+    "direction": "bullish",
+    "confidence": 0.43,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.76,
+      "proximity": 0.015,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    },
+    "weak_symbol": {
+      "weakness_score": 0.6979,
+      "severity": "SEVERE",
+      "original_direction": "bullish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "pfs-link-20260325-1200",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T12:00:00Z",
+    "symbol": "LINK",
+    "direction": "bullish",
+    "confidence": 0.40,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.76,
+      "proximity": 0.015,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-btc-20260325-1800",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T18:00:00Z",
+    "symbol": "BTC",
+    "direction": "bearish",
+    "confidence": 0.41,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.013,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-eth-20260325-1800",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T18:00:00Z",
+    "symbol": "ETH",
+    "direction": "bearish",
+    "confidence": 0.45,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.013,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  },
+  {
+    "signal_id": "pfs-sol-20260325-1800",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T18:00:00Z",
+    "symbol": "SOL",
+    "direction": "bearish",
+    "confidence": 0.44,
+    "horizon_hours": 24,
+    "action": "INVERT",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.013,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    },
+    "weak_symbol": {
+      "weakness_score": 0.6979,
+      "severity": "SEVERE",
+      "original_direction": "bearish",
+      "inversion_p_value": 0.0001
+    }
+  },
+  {
+    "signal_id": "pfs-link-20260325-1800",
+    "producer_id": "post-fiat-signals",
+    "timestamp": "2026-03-25T18:00:00Z",
+    "symbol": "LINK",
+    "direction": "bearish",
+    "confidence": 0.39,
+    "horizon_hours": 24,
+    "action": "EXECUTE",
+    "schema_version": "1.0.0",
+    "regime_context": {
+      "regime_id": "SYSTEMIC",
+      "regime_confidence": 0.77,
+      "proximity": 0.013,
+      "duration_days": 19,
+      "decision": "NO_TRADE"
+    }
+  }
+]
