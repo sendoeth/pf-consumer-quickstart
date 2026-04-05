@@ -704,7 +704,7 @@ def _resolve_signal(signal, prices):
     if not sym_prices:
         return None
 
-    def find_closest(target, tolerance_hours=1.5):
+    def find_closest(target, tolerance_hours=2.0):
         best = None
         best_delta = timedelta(hours=tolerance_hours)
         for pt, pp in sym_prices:
